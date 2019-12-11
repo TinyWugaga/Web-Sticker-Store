@@ -1,0 +1,367 @@
+html ,body {
+
+    font-family: Microsoft JhengHei ,monospace;
+    margin: 0;
+    line-height: 1.231;
+    color: #737373;
+}
+
+nav, ol, ul, li {
+
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: list-item;
+}
+
+a, a:link, a:active {
+
+    text-decoration: none;
+    color: #000;
+}
+
+input, select, h1, ul, form, button {
+
+    border: 0;
+    margin: 0;
+    vertical-align: baseline;
+    font-family: 'Helvetica Neue',Helvetica,arial,sans-serif;
+}
+
+input {
+
+    outline:none;
+}
+
+img {
+
+    border: 0;
+    vertical-align: top;
+}
+
+p {
+
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    
+    position: relative;
+    height: 100%;
+}
+
+.container {
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 0;
+}
+
+.btn {
+
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    text-decoration: none !important;
+    font-family: inherit;
+}
+
+.btn + .btn {
+    
+    margin-left: 4px;
+}
+
+.btn__inner {
+
+    display: table-cell;
+    vertical-align: middle;
+    height: 44px;
+}
+
+.btn__text {
+
+    min-width: 148px;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+/*=================================\
+|====           HEADER         ====|
+\=================================*/
+
+.header{
+
+    min-width: 1300px;
+    height: 71px;
+    background: #313131;
+}
+
+.header__logo {
+
+    float: left;
+    margin: 25px 0 0 30px;
+
+    font-size: 1.8rem;
+    width: 138px;
+}
+
+.header__logo a {
+    
+    line-height: 0.9;
+    color: #e0e0e0;
+}
+
+.header__logo span {
+
+    margin-right: 2px;
+    color: #00b84f;
+}
+
+.header__search {
+
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    width: 265px;
+    height: 41px;
+    background-position: 0px -132px;
+    margin: 15px 0 0 45px;
+
+    border: rgba(31, 31, 31, .21) solid 1px;
+    border-radius: 40px;
+    background-color: #272727;
+}
+
+.header__search_block {
+
+    display: inline-flex;
+    position: absolute;
+    top: 5px;
+    right: 13px;
+}
+
+.header__search_block--filter {
+
+    top: 3px;
+    left: 5px;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 35px;
+
+    width: 30px;
+    height: 30px;
+
+    vertical-align: middle;
+}
+
+.header__search_block--filter:hover {
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.icon-filter {
+
+    line-height: 1.4;
+    font-size: 26px;
+}
+
+.search__filter_select {
+
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+
+    font-size: 14px;
+    transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+    background-color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: none;
+    -webkit-appearance: none;
+}
+
+.search__filter_select option {
+
+    opacity: 1;
+}
+
+.search__submit_input {
+
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-search {
+  
+    font-size: 30px;
+}
+
+.header__search_input {
+
+    width: 182px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    background: transparent;
+    color: #e0e0e0;
+    font-size: 14px;
+    padding: 0;
+}
+
+.header__util {
+
+    position: relative;
+    float: right;
+    margin: 29px 39px 0 0;
+}
+
+.header__util::after {
+
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header__util_item {
+
+    float: left;
+    font-size: 14px;
+    color: #848484;
+    margin-left: 12px;
+    line-height: 1.5;
+}
+
+.header__util_item a {
+
+    color: #848484;
+    vertical-align: middle;
+}
+
+
+.util__item_icon {
+
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: middle;
+}
+
+.icon-wish {
+    
+    color: #00b84f;
+}
+
+.login-button a {
+
+    line-height: 1.5;
+}
+
+.util__item_line {
+
+    position: relative;
+    margin-right: 6px;
+    color: #313131;
+}
+
+.util__item_line::after {
+
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -7px;
+    height: 13px;
+    border-color: #444;
+    vertical-align: top;
+
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    border-left-width: 1px;
+    border-left-style: solid;
+    vertical-align: -1px;
+    height: 11px;
+}
+
+/*=================================\
+|====          SIDEBAR         ====|
+\=================================*/
+
+.sidebar {
+
+    float: left;
+    width: 218px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 1px;
+    height: 100%;
+    background-color: #d6d6d6;
+}
+
+.sidebar__nav {
+
+    margin-left: 30px;
+    min-width: 158px;
+}
+
+.sidebar__nav a {
+
+    display: block;
+}
+
+.sidebar__title {
+
+    color: #bec0c7;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 27px;
+}
+
+.sidebar__list {}
+
+.sidebar__list_item {
+
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    margin-top: 27px;
+}
+
+.sidebar__list_item:first-child {
+
+    margin-top: 16px;
+}
+
+.sidebar__list_item a {
+
+    color: #000;
+}
+
+.sidebar__list_item a:hover,
+.sidebar__list_item.selected a {
+
+    color: #00b84f;
+}
